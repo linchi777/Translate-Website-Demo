@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Translate Web</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+    <script src="index.js" lang="javascript"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark" style="background-color:slategrey">
+        <a class="navbar-brand" href="index.html" style="font: size 30px;">
+            <img src="mylogo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            翻译
+        </a>
+    </nav>
+    <div id="container">
+        <div class="mode">英译中</div>
+        <input type="button" class="tran" id="translate" value="翻译"></input>
+        <div class="main">
+            <div class="input-wrap">
+                <div class="textarea-bg-text" id="textarea-bg-text"></div>
+                <textarea class="input-content" id="content" rows="50" cols="30" placeholder="请输入要翻译的单词"></textarea>
+                <input type="button" class="readinput" id="tts_btn1" onclick="doTTS1()"></input>
+            </div>
+            <div class="output-wrap">
+                <div id="showoutput"></div>
+            </div>
+        </div>
+    </div>
+    <div id="bdtts_div_id">
+        <audio id="tts_autio_id">
+            <source id="tts_source_id" src="http://tts.baidu.com/text2audio?lan=zh&ie=UTF-8&spd=9&text=播报内容" type="audio/mpeg">
+            <embed id="tts_embed_id" height="0" width="0" src="">
+        </audio>
+    </div>
+</body>
+</html>
